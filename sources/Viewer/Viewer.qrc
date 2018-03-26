@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>Resources/GavabIcon.png</file>
+        <file>Resources/GavabIcon.ico</file>
+        <file>Resources/next.ico</file>
+        <file>Resources/prev.ico</file>
+        <file>Resources/first.ico</file>
+        <file>Resources/last.ico</file>
+        <file>Resources/rectangle.ico</file>
+        <file>Resources/polygon.ico</file>
+        <file>Resources/points.ico</file>
+        <file>Resources/Zoom100.ico</file>
+        <file>Resources/ZoomFit.ico</file>
+        <file>Resources/closedLock.ico</file>
+        <file>Resources/openLock.ico</file>
+    </qresource>
+</RCC>
