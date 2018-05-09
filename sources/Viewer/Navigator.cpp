@@ -16,6 +16,7 @@ public:
     void nextImage(){}
     void prevImage(){}
     int getCurrentImageNumber() {return 0;}
+    QString getCurrentImageName(){return "";}
 };
 
 Navigator::Navigator(ViewerWindow *mainWindow, QWidget *parent) :

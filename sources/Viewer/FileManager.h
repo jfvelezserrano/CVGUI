@@ -3,7 +3,7 @@
 
 #include <opencv2/core/core.hpp>
 
-#include <QStringList>
+#include <QString>
 
 class FileManager
 {
@@ -14,6 +14,7 @@ public:
     virtual void nextImage() = 0;
     virtual void prevImage() = 0;
     virtual int getCurrentImageNumber() = 0;
+    virtual QString getCurrentImageName() = 0;
 };
 
 #endif // FILEMANAGER_H

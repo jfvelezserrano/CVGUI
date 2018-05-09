@@ -2,6 +2,7 @@
 #define IMAGEFILEMANAGER_H
 
 #include "FileManager.h"
+#include <QStringList>
 
 class ImageFileManager : public FileManager
 {
@@ -15,6 +16,7 @@ public:
     void nextImage();
     void prevImage();
     int getCurrentImageNumber();
+    QString getCurrentImageName();
 private:
     bool isGray(const cv::Mat_<cv::Vec3b> &image);
 };

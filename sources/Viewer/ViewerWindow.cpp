@@ -232,8 +232,8 @@ void ViewerWindow::on_actionSave_polygon_layer_triggered()
     QString filter = "Regions (*.yml);;All (*.*)";
     QString selectedFilter ="regions (*.yml)";
 
-    QFileInfo info(lastLoadedFileName);
-    QString fileName = info.absolutePath()+"/"+info.baseName()+".yml";
+    QFileInfo info(navigator->getFileManager()->getCurrentImageName());
+    QString fileName = info.absolutePath() + "/" + info.baseName()+".yml";
     fileName = QFileDialog::getSaveFileName(this,"Save regions file", fileName, filter, &selectedFilter);
 
     if (fileName != "")

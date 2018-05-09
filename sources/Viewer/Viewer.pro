@@ -52,7 +52,9 @@ SOURCES += main.cpp\
     OperatorBuilders/Filters/KED/KEDBuilder.cpp \
     OperatorBuilders/Filters/KED/KEDFrame.cpp \
     OperatorBuilders/Filters/Morphology/MorphologicalFilterBuilder.cpp \
-    OperatorBuilders/Filters/Morphology/FrameMorphologicalFilter.cpp
+    OperatorBuilders/Filters/Morphology/FrameMorphologicalFilter.cpp \
+    OperatorBuilders/Detection/FrameHoughDetection.cpp \
+    OperatorBuilders/Detection/HoughDetectionBuilder.cpp
 
 HEADERS  += ViewerWindow.h \
     ScaleColorAsigner.h \
@@ -94,7 +96,9 @@ HEADERS  += ViewerWindow.h \
     OperatorBuilders/Filters/KED/KEDBuilder.h \
     OperatorBuilders/Filters/KED/KEDFrame.h \
     OperatorBuilders/Filters/Morphology/FrameMorphologicalFilter.h \
-    OperatorBuilders/Filters/Morphology/MorphologicalFilterBuilder.h
+    OperatorBuilders/Filters/Morphology/MorphologicalFilterBuilder.h \
+    OperatorBuilders/Detection/FrameHoughDetection.h \
+    OperatorBuilders/Detection/HoughDetectionBuilder.h
 
 FORMS    += ViewerWindow.ui \
     Navigator.ui \
@@ -106,7 +110,8 @@ FORMS    += ViewerWindow.ui \
     OperatorBuilders/Filters/Gabor/FrameGaborFilter.ui \
     OperatorBuilders/Filters/Canny/FrameCannyFilter.ui \
     OperatorBuilders/Filters/KED/KEDFrame.ui \
-    OperatorBuilders/Filters/Morphology/FrameMorphologicalFilter.ui
+    OperatorBuilders/Filters/Morphology/FrameMorphologicalFilter.ui \
+    OperatorBuilders/Detection/FrameHoughDetection.ui
 
 RESOURCES += \
     Viewer.qrc

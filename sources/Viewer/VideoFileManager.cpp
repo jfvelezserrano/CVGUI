@@ -3,7 +3,8 @@
 
 VideoFileManager::VideoFileManager(QStringList fileList)
 {
-    video.open(fileList[0].toStdString());
+    videoFileName = fileList[0];
+    video.open(videoFileName.toStdString());
     video >> image;
     count = 0;
 }
@@ -46,4 +47,9 @@ int VideoFileManager::getCurrentImageNumber()
 {
     int c = video.get(CV_CAP_PROP_POS_FRAMES);
     return count;
+}
+
+QString VideoFileManager::getCurrentImageName()
+{
+      return videoFileName + "_" + "frame_" + QString(count);
 }

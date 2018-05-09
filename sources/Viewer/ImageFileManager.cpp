@@ -10,6 +10,11 @@ int ImageFileManager::getCurrentImageNumber()
     return currentImage;
 }
 
+QString ImageFileManager::getCurrentImageName()
+{
+    return fileList[currentImage];
+}
+
 ImageFileManager::ImageFileManager(QStringList fileList)
 {
     this->fileList = fileList;
