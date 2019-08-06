@@ -9,8 +9,8 @@ cd
 apt update
 apt-get install software-properties-common -y
 apt install qt5-default -y
-apt install libopencv-dev -y
-apt install git
+DEBIAN_FRONTEND=noninteractive apt install libopencv-dev -y
+apt install git -y
 
 git clone https://github.com/jfvelezserrano/CVGUI.git
 mkdir build
