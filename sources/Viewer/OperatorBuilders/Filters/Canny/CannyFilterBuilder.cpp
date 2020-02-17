@@ -5,7 +5,7 @@
 
 CannyFilterBuilder::CannyFilterBuilder()
 {
-    frame = NULL;
+    frame = nullptr;
 }
 
 
@@ -51,11 +51,11 @@ std::string CannyFilterBuilder::getCode()
 
 QFrame *CannyFilterBuilder::getConfigPanel()
 {
-    if (frame == NULL)
+    if (frame == nullptr)
     {
         frame = new FrameCannyFilter(this);
-        return frame;
     }
+    return frame;
 }
 
 

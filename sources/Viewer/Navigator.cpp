@@ -186,21 +186,23 @@ void Navigator::addPolygon(std::vector<cv::Point> polygon)
 {
     //InfoView &infoView = infoViews[ui->imageTree->currentItem()];
 
-    /*
-    QPolygonF qPolygon;
-    for (int cont = 0; cont < polygon.size(); cont++)
+    const int polygon_size = static_cast<int>(polygon.size());
+
+    cv::Mat_<int> polygon_aux(polygon_size,2);
+
+    for (int cont = 0; cont < polygon_size; cont++)
     {
-        qPolygon.push_back(QPointF(polygon[cont].x,polygon[cont].y));
+        polygon_aux(0,cont) = polygon[cont].x;
+        polygon_aux(1,cont) = polygon[cont].y;
     }
 
-    QVector<QPolygonF> qPolygonVector;
-    qPolygonVector.push_back(qPolygon);
-    viewer->setPolygonList(qPolygonVector);
-    */
-/*
-    ImageViewerPolygonSelection *polygonSelection = new ImageViewerPolygonSelection(qPolygon,viewer);
-    infoView.roiList->insert(polygonSelection);
-    viewer->repaint();*/
+    std::vector<cv::Mat_<int> > polygonVector = viewer->getPolygonList();
+    polygonVector.push_back(polygon_aux);
+    viewer->setPolygonList(polygonVector);
+
+    //ImageViewerPolygonSelection *polygonSelection = new ImageViewerPolygonSelection(qPolygon,viewer);
+    //infoView.roiList->insert(polygonSelection);
+    viewer->repaint();
 }
 
 FileManager *Navigator::getFileManager()

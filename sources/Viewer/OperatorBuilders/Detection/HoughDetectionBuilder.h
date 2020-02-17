@@ -5,8 +5,12 @@
 #include <OperatorBuilder.h>
 #include <OperatorConfigurator.h>
 
+#include "FrameHoughDetection.h"
+
 class HoughDetectionBuilder : public OperatorConfigurator
 {
+    FrameHoughDetection *frame;
+
 public:
     HoughDetectionBuilder();
 
@@ -26,6 +30,8 @@ public:
     QFrame *getConfigPanel();
     cv::Mat getPreviewImage();
 
+private:
+    std::vector<std::vector<cv::Point> > getHough(cv::Mat &image);
 };
 
 #endif // HOUGHDETECTIONBUILDER_H

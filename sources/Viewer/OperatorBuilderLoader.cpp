@@ -13,6 +13,7 @@
 #include <OperatorBuilders/Filters/KED/KEDBuilder.h>
 #include <OperatorBuilders/Filters/Distance/DistanceFilterBuilder.h>
 #include <OperatorBuilders/Filters/Distance/MaximunFilterBuilder.h>
+#include <OperatorBuilders/Detection/HoughDetectionBuilder.h>
 
 std::list<OperatorBuilder *> OperatorBuilderLoader::getOperators()
 {
@@ -33,6 +34,7 @@ std::list<OperatorBuilder *> OperatorBuilderLoader::getOperators()
     l.push_back(new DistanceFilterBuilder());
     l.push_back(new MaximunFilterBuilder());
     l.push_back(new KEDBuilder());
+    l.push_back(new HoughDetectionBuilder());
 
     return l;
 }
